@@ -37,7 +37,7 @@ def run_nancy():
     print(command)
     if 'play' in command:
         song=command.replace("play","")
-        talk('playing ' +song)
+        talk('Playing ' +song)
         pywhatkit.playonyt(song)
     elif 'time' in command:
         time = datetime.datetime.now().strftime('%I:%M %p')
@@ -72,6 +72,7 @@ def run_nancy():
 
 
     else:
+        print('please day the command again')
         talk('please say the command again')
 
 
